@@ -4,4 +4,8 @@ nltk
 wordcloud
 matplotlib
 jupyterlab
-ipywidgets  # Opcional, para widgets interactivos en notebooks
+ipywidgets
+flake8
+pylint
+black
+isort
