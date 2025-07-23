@@ -20,3 +20,11 @@ VOLUME /output
 
 # Comando por defecto: Iniciar Jupyter Lab sin token para simplicidad (usa --allow-root si es necesario)
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''"]
+
+# Instalar Selenium y dependencias ligeras
+RUN apt-get update && apt-get install -y \
+    wget \
+    unzip \
+    chromium-driver
+
+RUN pip install selenium
